@@ -1,73 +1,35 @@
-# React + TypeScript + Vite
+# Real Estate Investment Platform 🏢
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend part of a technical assignment: a platform for browsing and investing in real estate properties. The project features a fully responsive design (works perfectly on both desktop and mobile) and a complete authentication system.
 
-Currently, two official plugins are available:
+🌍 **Live Demo:** [View project on Vercel](https://zenbit-tech-frontend.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
 
-## React Compiler
+* **Property Catalog:** Browse a list of available properties with prices, yield, and sold percentages.
+* **Authentication:** User registration and login (using JWT tokens).
+* **Protected Actions:** The "Invest" button and the application modal correctly handle logged-in user data (the user's email is auto-filled).
+* **Modals:** Implemented using React Portals to avoid CSS `z-index` and overflow conflicts.
+* **Responsive Design:** Mobile-friendly interface (featuring a hamburger menu) that scales perfectly to wide desktop screens.
+* **Notifications:** Users receive sleek toast notifications for successful actions or errors.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+* **React (Vite)** — for fast UI development and building.
+* **Redux Toolkit** — for global state management (storing user sessions and property data).
+* **React Router v6** — for seamless page navigation (Home, Login, Register, Reset Password).
+* **CSS Modules** — for scoped styling (ensuring styles don't leak and break other components).
+* **Axios** — for making HTTP requests to the backend API.
+* **React Hot Toast** — for pop-up user notifications.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 How to Run Locally
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+To get this project running on your local machine, follow these steps:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/AndriiButenko05/zenbit-tech-frontend
+   cd zenbit-tech-frontend
+   npm install
+   npm run dev
+   ```
