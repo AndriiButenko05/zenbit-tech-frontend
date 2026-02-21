@@ -1,0 +1,43 @@
+.section {
+  padding: 24px 16px;
+}
+.title {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #b29f7e;
+  margin-bottom: 16px;
+  line-height: 121%;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .section {
+    padding: 32px 40px;
+  }
+  .title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .grid {
+    gap: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .section {
+    padding: 50px 80px 12px 80px;
+  }
+  .title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .grid {
+    gap: 20px;
+  }
+}

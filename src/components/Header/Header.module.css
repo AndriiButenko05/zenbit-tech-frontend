@@ -1,0 +1,155 @@
+header {
+  padding: 16px 24px;
+  background: #172234;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 100;
+}
+.logo {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 121%;
+  text-decoration: none;
+}
+.buttons {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: 1px solid #b29f7e;
+  background: transparent;
+  border-radius: 5px;
+  width: 160px;
+  height: 44px;
+  font-family: "Merriweather", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 138%;
+  text-align: center;
+  color: #b29f7e;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+.button:hover {
+  background: rgba(178, 159, 126, 0.15);
+}
+.button.signUp {
+  background: #b29f7e;
+  color: #fff;
+}
+.button.signUp:hover {
+  background: #c9b48e;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 110;
+  fill: white;
+  transition: transform 0.3s ease;
+}
+.hamburger.open {
+  transform: rotate(90deg);
+}
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInScale 0.3s ease-out;
+}
+.icon {
+  fill: white;
+  transition: fill 0.2s ease;
+}
+.mobileMenu {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #172234;
+  border-top: 1px solid rgba(178, 159, 126, 0.2);
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding: 0 24px;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.35s ease,
+    padding 0.35s ease;
+}
+.mobileMenu.open {
+  max-height: 200px;
+  opacity: 1;
+  padding: 24px;
+}
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.userEmail {
+  font-family: "Merriweather", sans-serif;
+  font-size: 16px;
+  opacity: 0.8;
+}
+@media (min-width: 768px) {
+  header {
+    padding: 18px 40px;
+  }
+  .logo {
+    font-size: 22px;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .button {
+    width: 160px;
+    font-size: 16px;
+  }
+  .hamburger {
+    display: none;
+  }
+  .mobileMenu {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 22px 80px;
+  }
+  .logo {
+    font-size: 28px;
+  }
+  .userEmail {
+    font-size: 20px;
+  }
+}
